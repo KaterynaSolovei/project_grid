@@ -1,0 +1,29 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-navbar {
+  &__btn {
+    display: none;
+  }
+
+  &__btn-row {}
+
+  &__list {
+    @include unlist;
+    margin: 1px -10px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    justify-content: end;
+    gap: $gap;
+  }
+
+  &__item {}
+
+  &__link {
+    padding: $gap 10px;
+    font-size: 1.125rem;
+    letter-spacing: 0.1em;
+    padding: 20px 10px;
+    width: 100%;
+  }
+}
