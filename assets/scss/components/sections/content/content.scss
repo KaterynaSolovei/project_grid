@@ -20,7 +20,8 @@ p:first-of-type {
     height: 200px;
     content: "";
     background-color: rgba(99, 117, 136, 0.1);
-}
+    right: -50px;
+  }
 }
 
 p {
@@ -37,7 +38,6 @@ p:last-of-type {
 
 .content {
   background-color: $color-gray-light;
-
   padding-top: 65.5px;
   padding-bottom: 80px;
   min-height: 700px;
@@ -50,17 +50,13 @@ p:last-of-type {
   @extend %container;
   display: grid;
   gap: 100px;
-    grid-template-columns: 1fr 271px;
-//  padding-left: 489.5px;
- // font-size: 16px;
- // padding-right: 489.5px;
+  grid-template-columns: 1fr 271px;
 }
 
 .content-title {
   letter-spacing: 0.055em;
   color: $color-primary;
   font-family: "Roboto Slab", serif;
-
 }
 
 .content-image {
@@ -68,7 +64,6 @@ p:last-of-type {
   align-content: center;
   justify-items: center;
   justify-content: end;
-
   justify-items: end;
 }
 
