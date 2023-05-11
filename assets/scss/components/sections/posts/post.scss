@@ -2,3 +2,114 @@
 @use "../../../mixins" as *;
 
 
+h3 {
+  letter-spacing: 0.05em;
+  color: #637588;
+  font-size: 1.125rem;
+}
+
+.posts {
+  display: grid;
+  margin: $gap-x5;
+  contain: content;
+  display: grid;
+ //  grid-template-areas:"p1 p1 p2 p3""p4 p5 p6 p6";
+   // grid-template-columns: repeat(4, 1fr);
+}
+
+  /*
+.post-item {
+  background-repeat: no-repeat;
+
+&__text {
+  contain: content;
+  padding: 20px;
+  display: grid;
+
+}
+  &__link {
+ 
+    display: grid;
+    overflow: hidden;
+    height: 100%;
+    grid-template-rows: 300px 1fr;
+    background-color: $color-gray-light;
+  }
+}
+
+&__image {
+  width: 100%;
+}
+
+.post {
+   
+  &__grid {
+    padding-bottom: 20px;
+    gap: 20px;
+    display: grid;
+
+  }
+}
+
+
+.post {
+  @include sm-min {
+    padding: $gap-sm;
+  }
+
+  @include sm {
+    padding: $gap;
+  }
+
+  &__title {
+    letter-spacing: 0.1em;
+    font-family: "Roboto Slab", serif;
+    line-height: 1.2em;
+  }
+
+
+ &__container {
+    @extend %container;
+
+
+    @include lg-min {
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include lg-md {
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a6 a6";
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md-sm {
+      grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $gap-lg;
+    position: relative;
+    display: block;
+  }
+
+
+  @media (min-height: 691px) {
+    .posts__container {
+      grid-auto-rows: calc(33.33333vh - 13.33333px);
+    }
+  }
+
+  @media (max-height: 690px) {
+    .posts__container {
+      grid-auto-rows: calc(230px - 13.33333px);
+    }
+  }*/
+}
