@@ -4,15 +4,20 @@
 .footer {
   min-height: 250px;
   background-color: $color-primary;
-
   position: relative;
   padding: 50px 20px 70px;
-    text-align: center;
+  text-align: center;
 }
 
 .fab {
   font-weight: 400;
+  padding: 10px 10px 8px 10px;
+  transition: color 0.5s;
+}
 
+.footer__social-media a:hover,
+.footer__social-media a:focus {
+  color: #d66926;
 }
 
 .footer__social-media {
@@ -25,21 +30,22 @@
 
 .footer__container {
   @extend %container;
-
 }
 
 .footer-text {
   justify-content: center;
   display: grid;
   color: #e5e5e5;
+
   &__first {
     margin-right: -0.5em;
     letter-spacing: 0.33em;
-    font-weight: 100;
+    font-weight: 80;
     color: rgba($color-light, 0.25);
     padding-bottom: 0;
-    margin-bottom: -20px;
+    margin-bottom: -18px;
   }
+
   &__second {
     letter-spacing: 0.05em;
     font-weight: 700;
@@ -48,7 +54,7 @@
 
 .line {
   position: relative;
-  bottom: 20px;
+  bottom: 19.5px;
   left: calc(50% - 37.5px);
   width: 75px;
   height: 2px;
