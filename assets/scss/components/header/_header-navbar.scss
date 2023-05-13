@@ -106,8 +106,8 @@
       padding: $gap-sm $gap;
     }
 
-    &hover,
-    &focus {
+    &:hover,
+    &:focus {
       color: $color-accent;
     }
   }

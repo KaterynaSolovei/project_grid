@@ -4,9 +4,9 @@
 
 html {
   line-height: 1.15;
-    overflow-y: scroll;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+  overflow-y: scroll;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 
 h2 {
@@ -15,23 +15,20 @@ h2 {
   line-height: 1.2em;
   letter-spacing: 0.1em;
   font-family: "Roboto Slab", serif;
-  color: #2d3651;
+  color: $color-primary;
   margin: 0;
 }
 
 p:first-of-type {
   margin-top: -5px;
+  position: relative;
 }
 
 p {
   color: $color-gray;
   position: relative;
-  color: #637588;
   font-family: "Roboto";
-
   font-size: 1.125rem;
-  line-height: 1.16;
-
 }
 
 p:last-of-type {
@@ -43,21 +40,20 @@ p:last-of-type {
   display: grid;
   gap: 100px;
   grid-template-columns: 1fr 271px;
-
 }
 
 .content-title {
   color: $color-primary;
   font-family: "Roboto Slab", serif;
-  line-height: 1.14em;
-    font-size: 1.125rem;
+  line-height: 1.15em;
+  font-size: 1.125rem;
 }
 
 .content-image {
   display: grid;
   align-content: center;
-  justify-content: end;
-  justify-items: end;
+  justify-items: center;
+//justify-items: end;
 
 }
 
@@ -65,11 +61,11 @@ p:last-of-type {
   max-width: 100%;
   max-height: 480px;
   position: position;
-  justify-content: end;
   display: grid;
   align-content: center;
-  justify-items: center;
+  //justify-items: center;
   border-style: none;
+ // margin-right: 2px;
 }
 
 .line__vertical {
@@ -78,7 +74,8 @@ p:last-of-type {
   height: 200px;
   background-color: rgb(99, 117, 136, 0.1);
   padding: -20px;
-  margin: 140px 320px 0;
+  //margin: 140px 319px 0;
+  margin: 139px 977px 0;
 }
 
 .content {
