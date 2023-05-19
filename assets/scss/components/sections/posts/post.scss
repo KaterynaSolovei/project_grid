@@ -1,60 +1,96 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
+article {
+  display: block;
+}
 
+img {
+  border-style: none;
+}
 
 h3 {
   letter-spacing: 0.05em;
   color: #637588;
   font-size: 1.125rem;
+  font-family: "Roboto Slab", serif;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 
 .posts {
-  display: grid;
   padding-top: $gap-x5;
   padding-bottom: $gap-x5;
-  contain: content;
+
+  &__container {
+    @extend %container;
+    display: grid;
+  }
+}
+
+.post-item:nth-of-type(1) {
+  grid-area: p1;
+}
+
+.post-item:nth-of-type(2) {
+  grid-area: p2;
+}
+
+.post-item:nth-of-type(3) {
+  grid-area: p3;
+}
+
+.post-item:nth-of-type(4) {
+  grid-area: p4;
+}
+
+.post-item:nth-of-type(5) {
+  grid-area: p5;
+}
+
+.post-item:nth-of-type(6) {
+  grid-area: p6;
 }
 
 .post {
-display: grid;
-
-  &__container {
-    max-width: 1340px;
-    margin: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-
-  &__title {
-
-  }
+  display: grid;
 
   &__grid {
     padding-bottom: 20px;
     gap: 20px;
     display: grid;
-  //  grid-template-rows: 300px 1fr;
-   grid-template-areas: "p1 p1 p2 p3""p4 p5 p6 p6";
+
+    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
-
+    justify-content: center;
+    contain: content;
   }
-
 }
 
+
 .post-item {
-  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &__text {
+    padding: 20px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
 
   &__link {
     display: grid;
     min-height: 100%;
     grid-template-rows: 300px 1fr;
-    background-color: $color-gray-light;
-position: relative;
+    overflow: hidden;
+  }
 
-overflow: hidden;
-height: 100%;
-
+  &__text p {
+    font-size: 1rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   &__image {
@@ -62,40 +98,69 @@ height: 100%;
     display: flex;
     justify-content: center;
     overflow: hidden;
-    object-fit: cover;
+
   }
+}
 
-  &__text {
-    contain: content;
-    padding: 20px;
-    display: grid;
-    position: relative;
-  }
+.post-item {
+  transition: background-color 0.5s;
+  background-color: #f2f2f2;
+}
 
+.post-item:hover {
+  background-color: #d8d8d8;
+}
 
+.post-item:hover .post-item__image img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
 
+.post-item:hover .post-item__text {
+  background-color: $color-gray-light;
+}
 
-.post-item:nth-of-type(1) {
-  grid-area: p1;
+.post-item:hover h3 {
+  color: #2d3651;
 }
-.post-item:nth-of-type(2) {
-  grid-area: p2;
-}
-.post-item:nth-of-type(3) {
-  grid-area: p3;
-}
-.post-item:nth-of-type(4) {
-  grid-area: p4;
-}
-.post-item:nth-of-type(5) {
-  grid-area: p5;
-}
-.post-item:nth-of-type(6) {
-  grid-area: p6;
-}
+
+.post-item:hover p {
+  color: #2d3651;
 }
 
 /*
+   &__image:hover {
+      transform: scale(1.1);
+      overflow: hidden;
+    }
+
+
+
+
+
+  &__text:hover {
+    background-color: #d8d8d8;
+    overflow: hidden;
+    
+  }
+
+  .post-item__link:hover .post-item__image {
+    transform: scale(1.1);
+    object-fit: cover;
+  }
+
+  .post-item:hover .post-item__text {
+    background-color: #d8d8d8;
+    color: #2d3651;
+  }
+
+}
+
+
+
+
+
+*/
 .post {
   @include sm-min {
     padding: $gap-sm;
@@ -116,44 +181,44 @@ height: 100%;
     @extend %container;
   }
 
-@include lg-min {
-  grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
-  grid-template-columns: repeat(4, 1fr);
-}
+  @include lg-min {
+    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-@include lg-md {
-  grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p6 p6";
-  grid-template-columns: repeat(3, 1fr);
-}
+  @include lg-md {
+    grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p6 p6";
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-@include md-sm {
-  grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
-  grid-template-columns: repeat(2, 1fr);
-}
+  @include md-sm {
+    grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-@include sm {
-  grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
-}
-
-
-&__actions {
-  display: grid;
-  justify-content: center;
-  margin-bottom: $gap-lg;
-  position: relative;
-  display: block;
-}
+  @include sm {
+    grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
+  }
 
 
-@media (min-height: 691px) {
-  .posts__container {
-    grid-auto-rows: calc(33.33333vh - 13.33333px);
+  &__actions {
+    display: grid;
+    justify-content: center;
+    margin-bottom: $gap-lg;
+    position: relative;
+    display: block;
+  }
+
+
+  @media (min-height: 691px) {
+    .posts__container {
+      grid-auto-rows: calc(33.33333vh - 13.33333px);
+    }
+  }
+
+  @media (max-height: 690px) {
+    .posts__container {
+      grid-auto-rows: calc(230px - 13.33333px);
+    }
   }
 }
-
-@media (max-height: 690px) {
-  .posts__container {
-    grid-auto-rows: calc(230px - 13.33333px);
-  }
-}
-}*/
