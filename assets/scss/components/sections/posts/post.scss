@@ -25,6 +25,8 @@ h3 {
   &__container {
     @extend %container;
     display: grid;
+    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -60,17 +62,13 @@ h3 {
     gap: 20px;
     display: grid;
 
-    grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    contain: content;
   }
 }
 
-
 .post-item {
   overflow: hidden;
-
+  display: grid;
+  
   &__text {
     padding: 20px;
     display: grid;
@@ -98,7 +96,6 @@ h3 {
     display: flex;
     justify-content: center;
     overflow: hidden;
-
   }
 }
 
@@ -121,46 +118,13 @@ h3 {
 }
 
 .post-item:hover h3 {
-  color: #2d3651;
+  color: $color-primary;
 }
 
 .post-item:hover p {
-  color: #2d3651;
+  color: $color-primary;
 }
 
-/*
-   &__image:hover {
-      transform: scale(1.1);
-      overflow: hidden;
-    }
-
-
-
-
-
-  &__text:hover {
-    background-color: #d8d8d8;
-    overflow: hidden;
-    
-  }
-
-  .post-item__link:hover .post-item__image {
-    transform: scale(1.1);
-    object-fit: cover;
-  }
-
-  .post-item:hover .post-item__text {
-    background-color: #d8d8d8;
-    color: #2d3651;
-  }
-
-}
-
-
-
-
-
-*/
 .post {
   @include sm-min {
     padding: $gap-sm;
@@ -176,8 +140,8 @@ h3 {
     line-height: 1.2em;
   }
 
-
   &__container {
+    display: grid;
     @extend %container;
   }
 

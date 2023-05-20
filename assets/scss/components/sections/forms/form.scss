@@ -4,7 +4,6 @@
 .form {
   background-color: $color-primary;
   padding: 30px 0;
-  background-color: #2d3651;
   position: relative;
 
   &__title {
@@ -20,48 +19,45 @@
   }
 }
 
-.form-item {
-  display: block;
+.form-item__input {
   width: 100%;
   height: 60px;
-  margin: auto;
-  display: grid;
-  border-radius: none;
+  display: block;
+  font-family: inherit;
+  padding-right: 30px;
+  padding-left: 30px;
 
-  &__input {
-    height: 60px;
-    min-width: 100%;
-    contain: content;
-    position: relative;
-    @extend %container;
-
-    overflow: visible;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-
-    transition: background-color 0.5s, border-color 0.5s;
-    letter-spacing: 0.15em;
-    color: $color-light;
-    border: 2px solid rgba($color-gray-light, 0);
-    border-bottom-color: rgba($color-gray-light, 0.25);
-    background-color: rgba($color-gray-light, 0.05);
-    font-size: 1.125rem;
-
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  &:hover,
-  &:focus {
-
-
-  }
+  letter-spacing: 0.15em;
+  color: $color-light;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba($color-gray-light, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 1.125rem;
 }
 
+.form-item__input::placeholder {
+  color: rgba($color-gray-light, 0.35);
+}
+
+.form-item__input:hover,
+.form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: $color-light;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.form-item__input:hover::placeholder,
+.form-item__input:focus::placeholder {
+  color: #8c9bab;
+}
 
 input {
-overflow: visible;
+  overflow: visible;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
 }
 
 form .btn--primary {
