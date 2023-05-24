@@ -3,7 +3,6 @@
 
 article {
   display: block;
-  gap: $gap;
 }
 
 img {
@@ -74,14 +73,25 @@ h3 {
   }
 }
 
+.post__grid {
+  @include md-sm {
+    padding-bottom: 0px;
+  }
+}
 
 h2 {
-  @include md {
+  @include md-sm {
     padding-top: 0px;
     margin-bottom: 2.25rem;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     font-family: "Roboto Slab", serif;
+  }
+
+  @include md {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2.25rem;
   }
 }
 
@@ -103,7 +113,6 @@ h2 {
     min-height: 100%;
     grid-template-rows: 300px 1fr;
     overflow: hidden;
-    padding-bottom: 20px;
   }
 
   &__text p {
@@ -124,7 +133,6 @@ h2 {
     background-color: $color-primary;
     display: flex;
     width: 100%;
-
   }
 
   .post-item__image img {
@@ -135,6 +143,12 @@ h2 {
   .post-item {
     transition: background-color 0.5s;
     background-color: #f2f2f2;
+  }
+
+  .post-item__link {
+    @include md {
+      padding-bottom: 20px;
+    }
   }
 
   .post-item:hover {

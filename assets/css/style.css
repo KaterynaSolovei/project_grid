@@ -811,8 +811,6 @@ form .btn--primary:hover {
 
 article {
   display: block;
-
-  gap: 20px;
 }
 
 img {
@@ -914,7 +912,6 @@ h3 {
   overflow: hidden;
 
   min-height: 100%;
-  padding-bottom: 20px;
 
   grid-template-rows: 300px 1fr;
 }
@@ -1134,6 +1131,10 @@ h3 {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
+  .form {
+    grid-template-areas: "b1" "b2" "b3";
+    grid-template-columns: repeat(3, 1fr);
+  }
   .post__grid {
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
     grid-template-columns: repeat(4, 1fr);
@@ -1153,6 +1154,10 @@ h3 {
   }
   .skills__container {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .form {
+    grid-template-areas: "b1" "b2" "b3";
     grid-template-columns: repeat(3, 1fr);
   }
   .post__grid {
@@ -1206,6 +1211,20 @@ h3 {
   .skill-item__title {
     font-size: 1.125rem;
   }
+  .content-container {
+    display: block;
+
+    padding-top: 0;
+    padding-bottom: 20px;
+
+    font-size: 1rem;
+  }
+  .form {
+    grid-template-areas: "b1" "b2" "b3";
+  }
+  .form__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .posts {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1217,12 +1236,13 @@ h3 {
   }
   h2 {
     margin-bottom: 2.25rem;
-    padding-top: 0;
 
     text-align: center;
 
-    font-family: "Roboto Slab", serif;
     font-size: 1.5rem;
+  }
+  .post-item .post-item__link {
+    padding-bottom: 20px;
   }
   .post-item .post__grid {
     padding-bottom: 0;
@@ -1234,9 +1254,25 @@ h3 {
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     grid-template-columns: repeat(2, 1fr);
   }
+  .form {
+    grid-template-areas: "b1 b1" "b2 b3";
+    grid-template-columns: repeat(2, 1fr);
+  }
   .post__grid {
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
     grid-template-columns: repeat(2, 1fr);
+  }
+  .post__grid {
+    padding-bottom: 0;
+  }
+  h2 {
+    margin-bottom: 2.25rem;
+    padding-top: 0;
+
+    text-align: left;
+
+    font-family: "Roboto Slab", serif;
+    font-size: 1.5rem;
   }
 }
 

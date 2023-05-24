@@ -84,3 +84,12 @@ p:last-of-type {
   padding-bottom: 100px;
   letter-spacing: 0.055em;
 }
+
+.content-container {
+  @include md {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 1rem;
+    padding-top: 0px;
+  }
+}
